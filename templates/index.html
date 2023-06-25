@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+            <input class="replenishment-user" placeholder='Введите id пользователя'></input>
+            <input class="replenishment-amount" type="number" min="0.01" step="0.01" placeholder='Введите сумму пополнения'></input>
+            <button class="replenishment-button">Пополнить счет</button>
+        </div>
+        <div>
+            <input class="debiting-user" placeholder='Введите id пользователя'></input>
+            <input class="debiting-amount" type="number" min="0.01" step="0.01" placeholder='Введите сумму списания'></input>
+            <button class="debiting-button">Снять деньги</button>
+        </div>
+        <div>
+            <input class="send-user" placeholder='Введите id отправителя'></input>
+            <input class="recipient-user" placeholder='Введите id получателя'></input>
+            <input class="transfer-amount" type="number" min="0.01" step="0.01" placeholder='Введите сумму перевода'></input>
+            <button class="transfer-button">Перевести деньги</button>
+        </div>
+        <div class="error-container">
+            <p class="error-text"></p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id счета</th>
+                    <th>id пользователя</th>
+                    <th>Сумма счета, руб.</th>
+                </tr>
+            </thead>
+            <tbody class="table__body">
+
+            </tbody>
+        </table>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script  type="text/javascript" src="{% static "js/scripts.js" %}"></script>
+</body>
+</html>
